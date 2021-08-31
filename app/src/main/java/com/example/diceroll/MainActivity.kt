@@ -20,18 +20,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun rollDice() {
 //        Create new dice object with 6 sides and roll it
-        val dice = Dice(6)
+        val dice = Dice (6)
         val diceRoll = dice.roll()
-        val image: ImageView = findViewById(R.id.diceImage)
+        val image1: ImageView = findViewById(R.id.diceImage1)
+        val image2: ImageView = findViewById(R.id.diceImage2)
 
-//        when(diceRoll) {
-//            1 -> image.setImageResource(R.drawable.dice_1)
-//            2 -> image.setImageResource(R.drawable.dice_2)
-//            3 -> image.setImageResource(R.drawable.dice_3)
-//            4 -> image.setImageResource(R.drawable.dice_4)
-//            5 -> image.setImageResource(R.drawable.dice_5)
-//            6 -> image.setImageResource(R.drawable.dice_6)
-//        }
         val drawableResource = when (diceRoll) {
             1 -> R.drawable.dice_1
             2 -> R.drawable.dice_2
@@ -40,9 +33,23 @@ class MainActivity : AppCompatActivity() {
             5 -> R.drawable.dice_5
             else -> R.drawable.dice_6
         }
-        image.setImageResource(drawableResource)
-        image.contentDescription = diceRoll.toString()
-    }
+        image1.setImageResource(drawableResource)
+
+        val dice2 = Dice (6)
+        val drawableResource2 = when (dice2.roll()) {
+            1 -> R.drawable.dice_1
+            2 -> R.drawable.dice_2
+            3 -> R.drawable.dice_3
+            4 -> R.drawable.dice_4
+            5 -> R.drawable.dice_5
+            else -> R.drawable.dice_6
+        }
+
+        image2.setImageResource(drawableResource2)
+
+
+
+        }
 
     class Dice(private val sides: Int) {
 

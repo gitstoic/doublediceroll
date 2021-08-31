@@ -1,5 +1,9 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">DiceRoll</string>
     <string name="roll">Roll</string>
     <string name="_1">1</string>
+    <string name="todo" tools:ignore="DuplicateDefinition">TODO</string>
+    <string name="todo3" tools:ignore="DuplicateDefinition">TODO</string>
+    <string name="todo2">todo2</string>
+    <string name="todo1">todo1</string>
 </resources>
